@@ -5,8 +5,9 @@ from datetime import datetime
 from ta.momentum import RSIIndicator
 
 # ----- CONFIGURAÇÃO (VEM DO GITHUB) -----
+import os
 TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_ID")
+CHAT_ID = os.getenv("CHAT_")
 RSI_ALERT = 30
 
 def send_telegram(message):
