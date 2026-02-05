@@ -6,7 +6,7 @@ from ta.momentum import RSIIndicator
 
 # ----- CONFIGURAÇÃO (VEM DO GITHUB SECRETS) -----
 TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_")  # se o seu secret realmente se chama CHAT_
+CHAT_ID = os.getenv("CHAT_ID")  # se o seu secret realmente se chama CHAT_
 RSI_ALERT = 30
 
 def send_telegram(message):
