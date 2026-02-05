@@ -4,18 +4,14 @@ import requests
 from datetime import datetime
 from ta.momentum import RSIIndicator
 
-# ----- CONFIGURAÇÃO (VEM DO GITHUB) -----
-import os
+# ----- CONFIGURAÇÃO (VEM DO GITHUB SECRETS) -----
 TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = os.getenv("CHAT_")
+CHAT_ID = os.getenv("CHAT_")  # se o seu secret realmente se chama CHAT_
 RSI_ALERT = 30
 
 def send_telegram(message):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-    payload = {
-        "chat_id": CHAT_ID,
-        "text": message
-    }
+    payload = {"chat_id": CHAT_ID, "text": message}
     requests.post(url, data=payload)
 
 def get_btc_data():
@@ -31,14 +27,14 @@ def main():
     rsi = latest["RSI"]
 
     message = (
-        f"?? BTC Monitor\n"
+        f"🚀 BTC Monitor\n"
         f"Preço: ${price:,.0f}\n"
         f"RSI(14): {rsi:.2f}\n"
-        f"? {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}"
+        f"⏰ {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}"
     )
 
     if rsi < RSI_ALERT:
-        message = "?? ALERTA DE SOBREVENDA\n\n" + message
+        message = "🚨 ALERTA DE SOBREVENDA\n\n" + message
 
     send_telegram(message)
 
