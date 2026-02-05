@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 from ta.momentum import RSIIndicator
 
-# ----- CONFIGURA«√O (VEM DO GITHUB) -----
+# ----- CONFIGURA√á√ÉO (VEM DO GITHUB) -----
 TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 RSI_ALERT = 30
@@ -31,7 +31,7 @@ def main():
 
     message = (
         f"?? BTC Monitor\n"
-        f"PreÁo: ${price:,.0f}\n"
+        f"Pre√ßo: ${price:,.0f}\n"
         f"RSI(14): {rsi:.2f}\n"
         f"? {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}"
     )
