@@ -35,10 +35,5 @@ OBJETIVO DO PROJETO:
 - Praticar Python com dados financeiros
 - Integrar Python com Telegram
 
-  ESTRUTURA DESSE PROJETO
-├── bot.py
-├── requirements.txt
-└── .github
-└── workflows
-└── btc.yml
+
 
