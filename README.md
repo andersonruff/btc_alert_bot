@@ -15,7 +15,7 @@ assistente pessoal, obrigado e segue mais inforações do projeto.
 - Calcula o indicador RSI (14)
 - Envia uma mensagem para o Telegram
 - Execução manual ou agendada
-- Código simples e fácil de entender (foco educacional)
+- Automatiza uma tarefe importante!!
 
 ---
 
